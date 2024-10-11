@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.551">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Bio/Diversity Project Quarto Workshop - Quarto Workshop</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Bio/Diversity Project Quarto Workshop</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#before-we-start" id="toc-before-we-start" class="nav-link active" data-scroll-target="#before-we-start">Before we start</a></li>
+  <li><a href="#creating-a-new-quarto-website-project" id="toc-creating-a-new-quarto-website-project" class="nav-link" data-scroll-target="#creating-a-new-quarto-website-project">Creating a new Quarto Website project</a></li>
+  <li><a href="#customizing-your-website" id="toc-customizing-your-website" class="nav-link" data-scroll-target="#customizing-your-website">Customizing your website</a>
+  <ul class="collapse">
+  <li><a href="#adding-links" id="toc-adding-links" class="nav-link" data-scroll-target="#adding-links">Adding links</a></li>
+  <li><a href="#changing-the-about-page" id="toc-changing-the-about-page" class="nav-link" data-scroll-target="#changing-the-about-page">Changing the <code>About</code> page</a></li>
+  <li><a href="#adding-images-to-about-page" id="toc-adding-images-to-about-page" class="nav-link" data-scroll-target="#adding-images-to-about-page">Adding images to <code>About</code> page</a></li>
+  </ul></li>
+  <li><a href="#adding-images-to-index.qmd" id="toc-adding-images-to-index.qmd" class="nav-link" data-scroll-target="#adding-images-to-index.qmd">Adding images to <code>index.qmd</code></a></li>
+  <li><a href="#adding-columns-to-our-page" id="toc-adding-columns-to-our-page" class="nav-link" data-scroll-target="#adding-columns-to-our-page">Adding columns to our page</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quarto Workshop</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="before-we-start" class="level1">
+<h1>Before we start</h1>
+<p>We will need to install the programming language <code>R</code> and the IDE (Integrated Development Environment) <code>RStudio</code>:</p>
+<ol type="1">
+<li><a href="https://cloud.r-project.org/">Download and Install R</a></li>
+<li><a href="https://posit.co/download/rstudio-desktop/">Download and Install RStudio Desktop</a> (Click on the button under <code>2: Install RStudio</code>)</li>
+</ol>
+</section>
+<section id="creating-a-new-quarto-website-project" class="level1">
+<h1>Creating a new Quarto Website project</h1>
+<p>After install R and RStudio Desktop, open RStudio.</p>
+<ol type="1">
+<li>On the menu on the top, click on <code>File</code> then select <code>New Project</code> <img src="images/step-1-new-project.png" class="img-fluid"></li>
+<li>A window will pop up, click on the <code>New Directory</code> option <img src="images/step-2-new-directory.png" class="img-fluid"></li>
+<li>For project type, select <code>Quarto Website</code> <img src="images/step-3-project-type.png" class="img-fluid"></li>
+<li>For my directory (folder) name I chose <code>bio-diversity-project</code> and I will have my project live in my <code>Documents</code> folder <img src="images/step-4-choose-folder.png" class="img-fluid"></li>
+<li>RStudio creates a default website for you, you can see what it looks like by clicking on the <code>Render</code> button at the top of the top-left panel <img src="images/step-5-render.png" class="img-fluid"></li>
+<li>Your browser window should pop up the website</li>
+<li>Now you are all set up to make some changes to it to make your own.</li>
+</ol>
+</section>
+<section id="customizing-your-website" class="level1">
+<h1>Customizing your website</h1>
+<p>The file that should be open for editing is <code>index.qmd</code> – that is the first page users see when they go to your website. We call it the landing page.</p>
+<p>You can switch between <code>Source</code> and <code>Visual</code> editing by click on the option you prefer at the top of the document <img src="images/Source-Visual.png" class="img-fluid"></p>
+<p>I personally prefer the <code>Source</code> mode.</p>
+<p>Change the text and the title. Here’s what I have for my <code>index.qmd</code>:</p>
+<pre><code>---
+title: "Adriana's Website"
+---
+
+I'm an Assistant Professor of Practice in Computer Science, where I teach students
+to develop a passion for all things coding. Being a Data Scientist (in addition to
+being a computer scientist), I am also involved in a number of efforts in data
+science education.</code></pre>
+<p>Click the render button to see your changes.</p>
+<p>The text we are typing in our <code>index.qmd</code> is markdown, which is a way to format text documents. Here’s some markdown syntax you should try:</p>
+<ul>
+<li>use <code>*</code> around a word to make that word <em>italics</em></li>
+<li>use <code>**</code> around a word (or any stretch of text) to make it <strong>bold</strong></li>
+</ul>
+<p>Here’s my updated file:</p>
+<pre><code>---
+title: "Adriana's Website"
+---
+
+I'm an *Assistant Professor of Practice* in Computer Science, where I teach students
+to develop a passion for all things coding. Being a *Data Scientist* (in addition to
+being a computer scientist), I am also involved in a number of efforts in data
+science education.</code></pre>
+<p>Click the render button to see your changes.</p>
+<p>Check out this <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown Basics page</a> for more formatting options.</p>
+<section id="adding-links" class="level2">
+<h2 class="anchored" data-anchor-id="adding-links">Adding links</h2>
+<p>To add a link, you use <code>[]</code> around the text that will be clickable, followed by the web address inside <code>()</code>. I’m linking the words <code>Computer Science</code> in my text to my department website:</p>
+<pre><code>---
+title: "Adriana's Website"
+---
+
+I'm an *Assistant Professor of Practice* in [Computer Science](https://cs.arizona.edu/), 
+where I teach students to develop a passion for all things coding. Being a *Data Scientist* 
+(in addition to being a computer scientist), I am also involved in a number of 
+efforts in data science education.</code></pre>
+<p>Click the render button to see your changes.</p>
+</section>
+<section id="changing-the-about-page" class="level2">
+<h2 class="anchored" data-anchor-id="changing-the-about-page">Changing the <code>About</code> page</h2>
+<p>Let’s work on the <code>about.qmd</code> page. On the right-bottom panel there’s a list of files in your website project. Click on <code>about.qmd</code> to open this file to edit <img src="images/open-existing-file.png" class="img-fluid"></p>
+<p>Here’s some text for your about page: <em>The Bio/Diversity Project is a collaborative effort between WISE, Saguaro National Park and the Friends of Saguaro National Park, with additional support from local environmental organizations, aimed at increasing the diversity of voices included in discussions of environmental problems and the development of their solutions. By increasing access to innovative environmental science educational opportunities and training, mentoring, and work experience along the K-16+ educational pipeline, we aim to get students excited about environmental science and support them along their educational journeys and into the workforce</em></p>
+<p>Add a links to these websites:</p>
+<ul>
+<li>https://biodiversityproject.arizona.edu/</li>
+<li>https://wise.arizona.edu/</li>
+<li>https://www.nps.gov/sagu/index.htm</li>
+<li>https://www.friendsofsaguaro.org/</li>
+</ul>
+<p>Click the render button to see your changes.</p>
+</section>
+<section id="adding-images-to-about-page" class="level2">
+<h2 class="anchored" data-anchor-id="adding-images-to-about-page">Adding images to <code>About</code> page</h2>
+<p>Let’s add a saguaro image to our about page.</p>
+<p>A good website for fair-use images is <a href="https://unsplash.com/">unsplash</a>. Find a free image you like and download it.</p>
+<p>We will create an images folder in our project to keep things organize.</p>
+<ol type="1">
+<li>Find your project folder in your computer</li>
+<li>Create a new folder called <code>images</code> <img src="images/images-folder.png" class="img-fluid"></li>
+<li>Copy the image you downloaded over to your <code>images</code> folder</li>
+</ol>
+<p>Now that you have an image you like to use, let’s add it to our <code>About</code> page. Here’s the syntax to add an image in quarto markdown (I changed the name of my image file to <code>saguaro</code>:</p>
+<pre><code>![Photo by Karl Magnuson](images/saguaro.png)</code></pre>
+<p>You write a caption between the <code>[]</code> and then between the <code>()</code> you have the path to your image file. Since my <code>saguaro.png</code> file is inside my <code>images</code> folder in my project, my image path is <code>images/saguaro.png</code>.</p>
+</section>
+</section>
+<section id="adding-images-to-index.qmd" class="level1">
+<h1>Adding images to <code>index.qmd</code></h1>
+<p>Let’s go back to the <code>index.qmd</code> and add a profile picture to our page. First make sure you have an image file you want to use inside your <code>images</code> folder.</p>
+<p>Here’s my updated page with my image (I left the caption empty for this one for now):</p>
+<pre><code>---
+title: "Adriana's Website"
+---
+
+![](images/profile-photo.jpg)
+
+I'm an *Assistant Professor of Practice* in [Computer Science](https://cs.arizona.edu/), 
+where I teach students to develop a passion for all things coding. Being a *Data Scientist* 
+(in addition to being a computer scientist), I am also involved in a number of 
+efforts in data science education.</code></pre>
+<p>I clicked render and the image is too big, so let’s make it smaller. Here’s some options of syntax to set the width of an image:</p>
+<ul>
+<li>width in pixels: <code>![](images/profile-photo.jpg){width=300}</code></li>
+<li>width in inches: <code>![](images/profile-photo.jpg){width=4in}</code></li>
+<li>width in percent of the total space: <code>![](images/profile-photo.jpg){width=80%}</code></li>
+</ul>
+<p>If you want more information on options for formatting images you can check out the <a href="https://quarto.org/docs/authoring/figures.html">Quarto help page on Figures</a>.</p>
+<p>The page would look better if the text were side-by-side with my profile image. We can create columns to address this issue.</p>
+</section>
+<section id="adding-columns-to-our-page" class="level1">
+<h1>Adding columns to our page</h1>
+<p>Here’s the syntax we are going to use to create columns:</p>
+<pre><code>:::: {.columns}
+
+Text and other columns go here
+
+::::</code></pre>
+<p>We first create a block of columns as shown above.</p>
+<p>Then each individual column will have the following syntax:</p>
+<pre><code>::: {.column}
+
+Specific column text and images go here
+
+:::</code></pre>
+<p>Here’s what my <code>index.qmd</code> document looks like:</p>
+<pre><code>---
+title: "Adriana's Website"
+---
+
+
+:::: {.columns}
+
+::: {.column}
+
+![](images/profile-photo.jpg){width=300}
+
+:::
+
+::: {.column}
+
+I'm an Assistant Professor of Practice in Computer Science, where I teach students
+to develop a passion for all things coding. Being a Data Scientist (in addition to
+being a computer scientist), I am also involved in a number of efforts in data
+science education as well.
+
+:::
+
+::::
+</code></pre>
+<p>Individual columns can also have width (and other properties) set:</p>
+<pre><code>::: {.column width="30%"}
+
+Specific column text and images go here
+
+:::</code></pre>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

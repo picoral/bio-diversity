@@ -1,0 +1,13 @@
+---
+title: "About"
+---
+
+This workshop and its lessons were created by Adriana Picoral.
+
+Dr. Picoral is an Assistant Professor of Practice in Computer Science, where she
+teaches students to develop a passion for all things coding. 
+Being a Data Scientist (in addition to
+being a computer scientist), she is also involved in a number of efforts in data
+science education.
+
+This website was created with Quarto.
