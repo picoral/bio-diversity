@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bio/Diversity Project Quarto Workshop - Quarto Workshop</title>
+<title>Bio/Diversity Project Quarto Workshop - Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -108,30 +108,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#before-we-start" id="toc-before-we-start" class="nav-link active" data-scroll-target="#before-we-start">Before we start</a></li>
-  <li><a href="#creating-a-new-quarto-website-project" id="toc-creating-a-new-quarto-website-project" class="nav-link" data-scroll-target="#creating-a-new-quarto-website-project">Creating a new Quarto Website project</a></li>
-  <li><a href="#customizing-your-website" id="toc-customizing-your-website" class="nav-link" data-scroll-target="#customizing-your-website">Customizing your website</a>
-  <ul class="collapse">
-  <li><a href="#adding-links" id="toc-adding-links" class="nav-link" data-scroll-target="#adding-links">Adding links</a></li>
-  <li><a href="#changing-the-about-page" id="toc-changing-the-about-page" class="nav-link" data-scroll-target="#changing-the-about-page">Changing the <code>About</code> page</a></li>
-  <li><a href="#adding-images-to-about-page" id="toc-adding-images-to-about-page" class="nav-link" data-scroll-target="#adding-images-to-about-page">Adding images to <code>About</code> page</a></li>
-  </ul></li>
-  <li><a href="#adding-images-to-index.qmd" id="toc-adding-images-to-index.qmd" class="nav-link" data-scroll-target="#adding-images-to-index.qmd">Adding images to <code>index.qmd</code></a></li>
-  <li><a href="#adding-columns-to-our-page" id="toc-adding-columns-to-our-page" class="nav-link" data-scroll-target="#adding-columns-to-our-page">Adding columns to our page</a></li>
-  <li><a href="#adding-a-new-page-to-our-website" id="toc-adding-a-new-page-to-our-website" class="nav-link" data-scroll-target="#adding-a-new-page-to-our-website">Adding a new page to our website</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quarto Workshop</h1>
+<h1 class="title">Project</h1>
 </div>
 
 
@@ -148,208 +132,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="before-we-start" class="level1">
-<h1>Before we start</h1>
-<p>We will need to install the programming language <code>R</code> and the IDE (Integrated Development Environment) <code>RStudio</code>:</p>
-<ol type="1">
-<li><a href="https://cloud.r-project.org/">Download and Install R</a></li>
-<li><a href="https://posit.co/download/rstudio-desktop/">Download and Install RStudio Desktop</a> (Click on the button under <code>2: Install RStudio</code>)</li>
-</ol>
-</section>
-<section id="creating-a-new-quarto-website-project" class="level1">
-<h1>Creating a new Quarto Website project</h1>
-<p>After install R and RStudio Desktop, open RStudio.</p>
-<ol type="1">
-<li>On the menu on the top, click on <code>File</code> then select <code>New Project</code> <img src="images/step-1-new-project.png" class="img-fluid"></li>
-<li>A window will pop up, click on the <code>New Directory</code> option <img src="images/step-2-new-directory.png" class="img-fluid"></li>
-<li>For project type, select <code>Quarto Website</code> <img src="images/step-3-project-type.png" class="img-fluid"></li>
-<li>For my directory (folder) name I chose <code>bio-diversity-project</code> and I will have my project live in my <code>Documents</code> folder <img src="images/step-4-choose-folder.png" class="img-fluid"></li>
-<li>RStudio creates a default website for you, you can see what it looks like by clicking on the <code>Render</code> button at the top of the top-left panel <img src="images/step-5-render.png" class="img-fluid"></li>
-<li>Your browser window should pop up the website</li>
-<li>Now you are all set up to make some changes to it to make your own.</li>
-</ol>
-</section>
-<section id="customizing-your-website" class="level1">
-<h1>Customizing your website</h1>
-<p>The file that should be open for editing is <code>index.qmd</code> – that is the first page users see when they go to your website. We call it the landing page.</p>
-<p>You can switch between <code>Source</code> and <code>Visual</code> editing by click on the option you prefer at the top of the document <img src="images/Source-Visual.png" class="img-fluid"></p>
-<p>I personally prefer the <code>Source</code> mode.</p>
-<p>Change the text and the title. Here’s what I have for my <code>index.qmd</code>:</p>
-<pre><code>---
-title: "Adriana's Website"
----
-
-I'm an Assistant Professor of Practice in Computer Science, where I teach students
-to develop a passion for all things coding. Being a Data Scientist (in addition to
-being a computer scientist), I am also involved in a number of efforts in data
-science education.</code></pre>
-<p>Click the render button to see your changes.</p>
-<p>The text we are typing in our <code>index.qmd</code> is markdown, which is a way to format text documents. Here’s some markdown syntax you should try:</p>
-<ul>
-<li>use <code>*</code> around a word to make that word <em>italics</em></li>
-<li>use <code>**</code> around a word (or any stretch of text) to make it <strong>bold</strong></li>
-</ul>
-<p>Here’s my updated file:</p>
-<pre><code>---
-title: "Adriana's Website"
----
-
-I'm an *Assistant Professor of Practice* in Computer Science, where I teach students
-to develop a passion for all things coding. Being a *Data Scientist* (in addition to
-being a computer scientist), I am also involved in a number of efforts in data
-science education.</code></pre>
-<p>Click the render button to see your changes.</p>
-<p>Check out this <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown Basics page</a> for more formatting options.</p>
-<section id="adding-links" class="level2">
-<h2 class="anchored" data-anchor-id="adding-links">Adding links</h2>
-<p>To add a link, you use <code>[]</code> around the text that will be clickable, followed by the web address inside <code>()</code>. I’m linking the words <code>Computer Science</code> in my text to my department website:</p>
-<pre><code>---
-title: "Adriana's Website"
----
-
-I'm an *Assistant Professor of Practice* in [Computer Science](https://cs.arizona.edu/), 
-where I teach students to develop a passion for all things coding. Being a *Data Scientist* 
-(in addition to being a computer scientist), I am also involved in a number of 
-efforts in data science education.</code></pre>
-<p>Click the render button to see your changes.</p>
-</section>
-<section id="changing-the-about-page" class="level2">
-<h2 class="anchored" data-anchor-id="changing-the-about-page">Changing the <code>About</code> page</h2>
-<p>Let’s work on the <code>about.qmd</code> page. On the right-bottom panel there’s a list of files in your website project. Click on <code>about.qmd</code> to open this file to edit <img src="images/open-existing-file.png" class="img-fluid"></p>
-<p>Here’s some text for your about page: <em>The Bio/Diversity Project is a collaborative effort between WISE, Saguaro National Park and the Friends of Saguaro National Park, with additional support from local environmental organizations, aimed at increasing the diversity of voices included in discussions of environmental problems and the development of their solutions. By increasing access to innovative environmental science educational opportunities and training, mentoring, and work experience along the K-16+ educational pipeline, we aim to get students excited about environmental science and support them along their educational journeys and into the workforce</em></p>
-<p>Add a links to these websites:</p>
-<ul>
-<li>https://biodiversityproject.arizona.edu/</li>
-<li>https://wise.arizona.edu/</li>
-<li>https://www.nps.gov/sagu/index.htm</li>
-<li>https://www.friendsofsaguaro.org/</li>
-</ul>
-<p>Click the render button to see your changes.</p>
-</section>
-<section id="adding-images-to-about-page" class="level2">
-<h2 class="anchored" data-anchor-id="adding-images-to-about-page">Adding images to <code>About</code> page</h2>
-<p>Let’s add a saguaro image to our about page.</p>
-<p>A good website for fair-use images is <a href="https://unsplash.com/">unsplash</a>. Find a free image you like and download it.</p>
-<p>We will create an images folder in our project to keep things organize.</p>
-<ol type="1">
-<li>Find your project folder in your computer</li>
-<li>Create a new folder called <code>images</code> <img src="images/images-folder.png" class="img-fluid"></li>
-<li>Copy the image you downloaded over to your <code>images</code> folder</li>
-</ol>
-<p>Now that you have an image you like to use, let’s add it to our <code>About</code> page. Here’s the syntax to add an image in quarto markdown (I changed the name of my image file to <code>saguaro</code>:</p>
-<pre><code>![Photo by Karl Magnuson](images/saguaro.png)</code></pre>
-<p>You write a caption between the <code>[]</code> and then between the <code>()</code> you have the path to your image file. Since my <code>saguaro.png</code> file is inside my <code>images</code> folder in my project, my image path is <code>images/saguaro.png</code>.</p>
-</section>
-</section>
-<section id="adding-images-to-index.qmd" class="level1">
-<h1>Adding images to <code>index.qmd</code></h1>
-<p>Let’s go back to the <code>index.qmd</code> and add a profile picture to our page. First make sure you have an image file you want to use inside your <code>images</code> folder.</p>
-<p>Here’s my updated page with my image (I left the caption empty for this one for now):</p>
-<pre><code>---
-title: "Adriana's Website"
----
-
-![](images/profile-photo.jpg)
-
-I'm an *Assistant Professor of Practice* in [Computer Science](https://cs.arizona.edu/), 
-where I teach students to develop a passion for all things coding. Being a *Data Scientist* 
-(in addition to being a computer scientist), I am also involved in a number of 
-efforts in data science education.</code></pre>
-<p>I clicked render and the image is too big, so let’s make it smaller. Here’s some options of syntax to set the width of an image:</p>
-<ul>
-<li>width in pixels: <code>![](images/profile-photo.jpg){width=300}</code></li>
-<li>width in inches: <code>![](images/profile-photo.jpg){width=4in}</code></li>
-<li>width in percent of the total space: <code>![](images/profile-photo.jpg){width=80%}</code></li>
-</ul>
-<p>If you want more information on options for formatting images you can check out the <a href="https://quarto.org/docs/authoring/figures.html">Quarto help page on Figures</a>.</p>
-<p>The page would look better if the text were side-by-side with my profile image. We can create columns to address this issue.</p>
-</section>
-<section id="adding-columns-to-our-page" class="level1">
-<h1>Adding columns to our page</h1>
-<p>Here’s the syntax we are going to use to create columns:</p>
-<pre><code>:::: {.columns}
-
-Text and other columns go here
-
-::::</code></pre>
-<p>We first create a block of columns as shown above.</p>
-<p>Then each individual column will have the following syntax:</p>
-<pre><code>::: {.column}
-
-Specific column text and images go here
-
-:::</code></pre>
-<p>Here’s what my <code>index.qmd</code> document looks like:</p>
-<pre><code>---
-title: "Adriana's Website"
----
 
 
-:::: {.columns}
-
-::: {.column}
-
-![](images/profile-photo.jpg){width=300}
-
-:::
-
-::: {.column}
-
-I'm an Assistant Professor of Practice in Computer Science, where I teach students
-to develop a passion for all things coding. Being a Data Scientist (in addition to
-being a computer scientist), I am also involved in a number of efforts in data
-science education as well.
-
-:::
-
-::::
-</code></pre>
-<p>Individual columns can also have width (and other properties) set:</p>
-<pre><code>::: {.column width="30%"}
-
-Specific column text and images go here
-
-:::</code></pre>
-</section>
-<section id="adding-a-new-page-to-our-website" class="level1">
-<h1>Adding a new page to our website</h1>
-<p>Let’s create a project page with information about one (or more) of our projects.</p>
-<ol type="1">
-<li>On the top menu click on <code>File</code> then select <code>New File</code> and <code>Quarto Document</code> <img src="images/new-quarto-document.png" class="img-fluid"></li>
-<li>Add a title to the new document, and click <code>Create</code> <img src="images/create-document.png" class="img-fluid"></li>
-<li>Save the new file – I named it <code>project.qmd</code></li>
-</ol>
-<p>We can now add this new page to our menu on the top. To do that we have to change our <code>_quarto.yml</code> file.</p>
-<ol type="1">
-<li>Click on the <code>_quarto.yml</code> file on the right-bottom panel to open it</li>
-<li>Add <code>- project.qmd</code> (should always match the name of one of your files) under <code>navbar: left:</code></li>
-</ol>
-<p>Here’s what my <code>_quarto.yml</code> file looks like:</p>
-<pre><code>project:
-  type: website
-
-website:
-  title: "bio-diversity-project"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-      - project.qmd
-
-format:
-  html:
-    theme: cosmo
-    css: styles.css
-    toc: true</code></pre>
-<ol type="1">
-<li>Go back to your <code>index.qmd</code> file and render it – the menu on the top should have changed.</li>
-<li>Change the title to something nicer, remember to use quotes around your title.</li>
-</ol>
-<p>Go back to <code>project.qmd</code> and add information to it using what you’ve learned about formatting texts, adding images, links and columns.</p>
-
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -241,3 +241,49 @@ Specific column text and images go here
 
 :::
 ```
+
+# Adding a new page to our website
+
+Let's create a project page with information about one (or more) of our projects.
+
+1. On the top menu click on `File` then select `New File` and `Quarto Document` ![](images/new-quarto-document.png)
+1. Add a title to the new document, and click `Create` ![](images/create-document.png)
+1. Save the new file -- I named it `project.qmd`
+
+We can now add this new page to our menu on the top. To do that we have to change our
+`_quarto.yml` file. 
+
+1. Click on the `_quarto.yml` file on the right-bottom panel to open it
+1. Add `- project.qmd` (should always match the name of one of your files) under
+`navbar: left:`
+
+
+Here's what my `_quarto.yml` file looks like:
+
+```
+project:
+  type: website
+
+website:
+  title: "bio-diversity-project"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - project.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+
+1. Go back to your `index.qmd` file and render it -- the menu on the top should have changed.
+1. Change the title to something nicer, remember to use quotes around your title.
+
+Go back to `project.qmd` and add information to it using what you've learned about formatting texts, adding images, 
+links and columns.
+
+
