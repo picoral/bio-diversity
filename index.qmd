@@ -14,6 +14,15 @@ We will need to install the programming language `R` and the IDE
 2.  [Download and Install RStudio
     Desktop](https://posit.co/download/rstudio-desktop/) (Click on the
     button under `2: Install RStudio`)
+    
+# Video Instructions
+
+In this video I follow the instructions found on this page. You can either
+follow the video or the written instructions below, whatever works best for you.
+
+{{< video https://youtu.be/t8iWYc3yb1U >}}
+
+
 
 # Creating a new Quarto Website project
 
