@@ -14,7 +14,9 @@ editor:
 
 # Step 2 -- Create your GitHub pages
 
-Follow the instructions at <https://pages.github.com/>
+Head over to GitHub and create a new public repository named `username.github.io`, where `username` is your `username` (or organization name) on GitHub. If the first part of the repository doesn’t exactly match your `username`, it won’t work, so make sure to get it right.
+
+Or follow the instructions at <https://pages.github.com/>
 
 Go to your quarto project folder, and copy everything that is in the `_site` folder over to your new GitHub repository
 
