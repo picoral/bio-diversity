@@ -17,3 +17,5 @@ editor:
 Follow the instructions at <https://pages.github.com/>
 
 Go to your quarto project folder, and copy everything that is in the `_site` folder over to your new GitHub repository
+
+Wait for the internet to learn how to route to your web address (it takes a couple of minutes) -- you can then just access your website by going to username.github.io with a web-browser
