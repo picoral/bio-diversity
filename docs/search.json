@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Quarto Workshop",
+    "title": "Quarto Workshop Parts 1 and 2",
     "section": "",
-    "text": "We will need to install the programming language R and the IDE (Integrated Development Environment) RStudio:\n\nDownload and Install R\nDownload and Install RStudio Desktop (Click on the button under 2: Install RStudio)"
+    "text": "Part 1 – build your quarto website\nPart 2 – publish your quarto website"
   },
   {
     "objectID": "about.html",
@@ -33,5 +33,40 @@
     "title": "Quarto Workshop",
     "section": "Adding links",
     "text": "Adding links\nTo add a link, you use [] around the text that will be clickable, followed by the web address inside (). I’m linking the words Computer Science in my text to my department website:\n---\ntitle: \"Adriana's Website\"\n---\n\nI'm an *Assistant Professor of Practice* in [Computer Science](https://cs.arizona.edu/), \nwhere I teach students to develop a passion for all things coding. Being a *Data Scientist* \n(in addition to being a computer scientist), I am also involved in a number of \nefforts in data science education.\nClick the render button to see your changes."
+  },
+  {
+    "objectID": "part1.html",
+    "href": "part1.html",
+    "title": "Quarto Workshop",
+    "section": "",
+    "text": "We will need to install the programming language R and the IDE (Integrated Development Environment) RStudio:\n\nDownload and Install R\nDownload and Install RStudio Desktop (Click on the button under 2: Install RStudio)"
+  },
+  {
+    "objectID": "part1.html#adding-links",
+    "href": "part1.html#adding-links",
+    "title": "Quarto Workshop",
+    "section": "Adding links",
+    "text": "Adding links\nTo add a link, you use [] around the text that will be clickable, followed by the web address inside (). I’m linking the words Computer Science in my text to my department website:\n---\ntitle: \"Adriana's Website\"\n---\n\nI'm an *Assistant Professor of Practice* in [Computer Science](https://cs.arizona.edu/), \nwhere I teach students to develop a passion for all things coding. Being a *Data Scientist* \n(in addition to being a computer scientist), I am also involved in a number of \nefforts in data science education.\nClick the render button to see your changes."
+  },
+  {
+    "objectID": "part1.html#changing-the-about-page",
+    "href": "part1.html#changing-the-about-page",
+    "title": "Quarto Workshop",
+    "section": "Changing the About page",
+    "text": "Changing the About page\nLet’s work on the about.qmd page. On the right-bottom panel there’s a list of files in your website project. Click on about.qmd to open this file to edit \nHere’s some text for your about page: The Bio/Diversity Project is a collaborative effort between WISE, Saguaro National Park and the Friends of Saguaro National Park, with additional support from local environmental organizations, aimed at increasing the diversity of voices included in discussions of environmental problems and the development of their solutions. By increasing access to innovative environmental science educational opportunities and training, mentoring, and work experience along the K-16+ educational pipeline, we aim to get students excited about environmental science and support them along their educational journeys and into the workforce\nAdd a links to these websites:\n\nhttps://biodiversityproject.arizona.edu/\nhttps://wise.arizona.edu/\nhttps://www.nps.gov/sagu/index.htm\nhttps://www.friendsofsaguaro.org/\n\nClick the render button to see your changes."
+  },
+  {
+    "objectID": "part1.html#adding-images-to-about-page",
+    "href": "part1.html#adding-images-to-about-page",
+    "title": "Quarto Workshop",
+    "section": "Adding images to About page",
+    "text": "Adding images to About page\nLet’s add a saguaro image to our about page.\nA good website for fair-use images is unsplash. Find a free image you like and download it.\nWe will create an images folder in our project to keep things organize.\n\nFind your project folder in your computer\nCreate a new folder called images \nCopy the image you downloaded over to your images folder\n\nNow that you have an image you like to use, let’s add it to our About page. Here’s the syntax to add an image in quarto markdown (I changed the name of my image file to saguaro:\n![Photo by Karl Magnuson](images/saguaro.png)\nYou write a caption between the [] and then between the () you have the path to your image file. Since my saguaro.png file is inside my images folder in my project, my image path is images/saguaro.png."
+  },
+  {
+    "objectID": "part2.html",
+    "href": "part2.html",
+    "title": "Quarto Workshop",
+    "section": "",
+    "text": "Step 1 – Set you a GitHub account\n\nGo to https://github.com/\nClick on Sign up\nFollow the prompts to create your personal account\n\n\n\nStep 2 – Create your GitHub pages\nFollow the instructions at https://pages.github.com/\nGo to your quarto project folder, and copy everything that is in the _site folder over to your new GitHub repository"
   }
 ]

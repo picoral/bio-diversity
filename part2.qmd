@@ -1,0 +1,19 @@
+---
+title: "Quarto Workshop"
+subtitle: "Part 2 -- publish your quarto website"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Step 1 -- Set you a GitHub account
+
+1. Go to <https://github.com/>
+1. Click on `Sign up`
+1. Follow the prompts to create your personal account
+
+# Step 2 -- Create your GitHub pages
+
+Follow the instructions at <https://pages.github.com/>
+
+Go to your quarto project folder, and copy everything that is in the `_site` folder over to your new GitHub repository
